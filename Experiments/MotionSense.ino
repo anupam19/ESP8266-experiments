@@ -3,6 +3,7 @@
 #define SERVER "173.17.168.19"
 #define PORT "8181"
 #define PIRPIN 2
+#define AUTH_TOKEN "YOUR_TOKEN_FROM_YOUR_ACCOUNT";
 
 char payload [150];
 char c;
@@ -153,11 +154,15 @@ void post () {
     String data = payload;
 
     String post = "POST /pushbullet/v2/pushes HTTP/1.1\r\n";
-    post += "Host: 173.17.168.19\r\n";
+    post += "Host: ";
+    post += SERVER;
+    post += "\r\n"
     post += "Accept: application/json";
     post += "User-Agent: Arduino\r\n";
     post += "Content-Type: application/json\r\n";
-    post += "Authorization: Bearer YOUR_TOKEN_FROM_YOUR_ACCOUNT\r\n";
+    post += "Authorization: Bearer ";
+    post += AUTH_TOKEN;
+    post += "\r\n"
     post += "Content-Length: ";
     post += data.length();
     post += "\r\n";
