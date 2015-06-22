@@ -3,7 +3,7 @@
 #define SERVER "173.17.168.19"
 #define PORT "8181"
 #define PIRPIN 2
-#define AUTH_TOKEN "YOUR_TOKEN_FROM_YOUR_ACCOUNT";
+#define AUTH_TOKEN "YOUR_TOKEN_FROM_YOUR_ACCOUNT"
 
 char payload [150];
 char c;
