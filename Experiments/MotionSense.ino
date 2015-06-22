@@ -108,6 +108,7 @@ void set_wifi_mode () {
     Serial2.println("AT+CWMODE=1");
 }
 
+/* Use this function to debug what WiFi Serial is sending to you after you executed an AT command */
 void serial_read() {
     while (Serial2.available () > 0) {
         c = Serial2.read();
